@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+  fastapi:
+    container_name: fastapi
+    build:
+      context: ./
+    depends_on:
+      - database
+    ports:
+      - "8000:8000"
+    restart: always
+    networks:
+      - app-network
+  database:
+    container_name: database
+    image: postgres:latest
+    networks:
+      - app-network
+    environment:
+      POSTGRES_USER: "root"
+      POSTGRES_PASSWORD: "123gr"
+      POSTGRES_DB: "database_analysis"
+
+networks:
+  app-network:

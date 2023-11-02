@@ -1,0 +1,12 @@
+asyncpg==0.28.0
+fastapi==0.104.1
+greenlet==3.0.1
+pandas==2.1.2
+psycopg2==2.9.9
+python-dotenv==1.0.0
+python-multipart==0.0.6
+pytest==7.4.3
+httpx==0.25.0
+openpyxl==3.1.2
+SQLAlchemy==2.0.22
+uvicorn==0.23.2
